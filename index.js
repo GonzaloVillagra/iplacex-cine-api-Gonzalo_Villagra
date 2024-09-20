@@ -13,10 +13,6 @@ app.use(express.json());
 app.use(urlencoded({ extended: true}));
 app.use(cors());
 
-import express from 'express';
-import routes from './routes'; 
-import client from './common/db.js'; 
-
 app.use('/api', routes);
 
 app.get('/', (req, res) => {

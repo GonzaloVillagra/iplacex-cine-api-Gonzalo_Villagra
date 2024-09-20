@@ -1,15 +1,17 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
-const uri = 'mongodb+srv://ev3_express:qt2yc3VyNaeQyGkZ@cluster-express.fybpz.mongodb.net/?retryWrites=true&w=majority&appName=cluster-express'
+const uri = 'mongodb+srv://ev3_express:qt2yc3VyNaeQyGkZ@cluster-express.fybpz.mongodb.net/pelicula?retryWrites=true&w=majority';
 
 const client = new MongoClient(uri, {
-    serverApi:{
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true
-        }
-    }
-) 
+    serverApi: {
+        version: ServerApiVersion.v1,
+        strict: true,
+        deprecationErrors: true
+    },
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    ssl: true,
+});
 
 export default client
 

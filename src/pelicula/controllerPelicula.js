@@ -3,7 +3,7 @@ import client from "../common/db.js";
 import { Pelicula } from "./pelicula.js";
 
 
-const peliculaCollection = client.db('pelicula'.collection('peliculas'))
+const peliculaCollection = client.db('Pelicula'.collection('peliculas'))
 
 //Funcion Agregar Pelicula
 async function handleInserPeliculaRequest(req, res) {

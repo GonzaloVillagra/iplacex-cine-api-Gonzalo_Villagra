@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
 import client from "../common/db.js";
-import { Pelicula } from "./pelicula";
+import { Pelicula } from "./pelicula.js";
 
 
 const peliculaCollection = client.db('pelicula'.collection(Pelicula))

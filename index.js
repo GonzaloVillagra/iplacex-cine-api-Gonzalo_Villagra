@@ -4,7 +4,7 @@ import client from './src/common/db.js';
 import routes from './src/pelicula/routes.js';
 
 
-const PORT = 3000 || 4000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 

@@ -15,6 +15,7 @@ app.use(cors());
 
 app.use('/api', routes);
 
+
 app.get('/', (req, res) => {
     const message = "Bienvenido a la API REST para el control de las películas";
     return res.status(200).send(message);

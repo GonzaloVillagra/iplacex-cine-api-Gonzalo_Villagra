@@ -9,7 +9,7 @@ routes.get('/Peliculas', controllerPelicula.handleGetPeliculaRequest)
 
 routes.get('/pelicula/:id', controllerPelicula.handleGetPeliculaByIdRequest)
 
-routes.update('/pelicula/:id', controllerPelicula.handleUpdatePeliculaByidRequest)
+routes.put('/pelicula/:id', controllerPelicula.handleUpdatePeliculaByidRequest)
 
 routes.delete('/pelicula/id', controllerPelicula.handleDeletePeliculaByIdRequest)
 

@@ -6,7 +6,7 @@ import { Pelicula } from "./pelicula.js";
 const peliculaCollection = client.db('pelicula').collection('Peliculas')
 
 //Funcion Agregar Pelicula
-async function handleInserPeliculaRequest(req, res) {
+async function handleInsertPeliculaRequest(req, res) {
 
     let data = req.body
     let pelicula = Pelicula
@@ -16,7 +16,7 @@ async function handleInserPeliculaRequest(req, res) {
     pelicula.generos = data.generos
     pelicula.anioEstreno = data.anioEstreno
 
-    await peliculaCollection.inserOne(pelicula)
+    await peliculaCollection.insertOne(pelicula)
     .then((data) => {
         if(data === null) return res.status(400).send('error al guardar') 
         return res.status(201).send(data)
@@ -97,6 +97,6 @@ export default {
     handleDeletePeliculaByIdRequest,
     handleGetPeliculaByIdRequest,
     handleGetPeliculaRequest,
-    handleInserPeliculaRequest,
+    handleInsertPeliculaRequest,
     handleUpdatePeliculaByidRequest,
 }

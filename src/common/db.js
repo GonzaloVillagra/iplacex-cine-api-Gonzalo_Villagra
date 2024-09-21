@@ -8,7 +8,6 @@ const client = new MongoClient(uri, {
         strict: true,
         deprecationErrors: true
     },
-    useUnifiedTopology: true,
     tls: true,
     tlsAllowInvalidCertificates: false
 });

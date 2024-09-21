@@ -8,8 +8,7 @@ const client = new MongoClient(uri, {
         strict: true,
         deprecationErrors: true
     },
-    tls: true, 
-    minTLSVersion: 'TLSv1.2'
+    tls: true,
 });
 
 

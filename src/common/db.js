@@ -1,6 +1,6 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
-const uri = 'mongodb+srv://ev3_express:qt2yc3VyNaeQyGkZ@cluster-express.fybpz.mongodb.net/pelicula?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://ev3_express:qt2yc3VyNaeQyGkZ@cluster-express.fybpz.mongodb.net/pelicula?tls=true';
 
 const client = new MongoClient(uri, {
     serverApi: {
@@ -8,8 +8,8 @@ const client = new MongoClient(uri, {
         strict: true,
         deprecationErrors: true
     },
-    tls: true,  // Asegura que la conexión use TLS
-    tlsAllowInvalidCertificates: false,  // Rechaza certificados inválidos (si es el caso)
+    tls: true, 
+    minTLSVersion: 'TLSv1.2'
 });
 
 

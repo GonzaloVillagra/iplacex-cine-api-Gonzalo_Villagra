@@ -11,7 +11,7 @@ routes.get('/pelicula/:id', controllerPelicula.handleGetPeliculaByIdRequest)
 
 routes.put('/pelicula/:id', controllerPelicula.handleUpdatePeliculaByidRequest)
 
-routes.delete('/pelicula/id', controllerPelicula.handleDeletePeliculaByIdRequest)
+routes.delete('/pelicula/:id', controllerPelicula.handleDeletePeliculaByIdRequest)
 
 export default routes
 

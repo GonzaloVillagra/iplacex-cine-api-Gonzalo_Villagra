@@ -1,6 +1,6 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
-const uri = 'mongodb+srv://ev3_express:qt2yc3VyNaeQyGkZ@cluster-express.fybpz.mongodb.net/pelicula?tls=true';
+const uri = 'mongodb+srv://ev3_express:qt2yc3VyNaeQyGkZ@cluster-express.fybpz.mongodb.net/?retryWrites=true&w=majority&appName=cluster-express';
 
 const client = new MongoClient(uri, {
     serverApi: {
@@ -8,7 +8,6 @@ const client = new MongoClient(uri, {
         strict: true,
         deprecationErrors: true
     },
-    tls: true,
 });
 
 

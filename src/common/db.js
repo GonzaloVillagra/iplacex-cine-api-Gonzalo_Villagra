@@ -9,7 +9,7 @@ const client = new MongoClient(uri, {
     deprecationErrors: true
         }
     }
-) 
+);
 
 export default client
 

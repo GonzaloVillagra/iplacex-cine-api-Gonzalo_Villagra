@@ -3,7 +3,7 @@ import controllerPelicula from './controllerPelicula.js'
 
 const routes = express.Router()
 
-routes.post('/pelicula', controllerPelicula.handleInserPeliculaRequest)
+routes.post('/pelicula', controllerPelicula.handleInsertPeliculaRequest)
 
 routes.get('/Peliculas', controllerPelicula.handleGetPeliculaRequest)
 

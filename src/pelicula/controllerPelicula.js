@@ -19,7 +19,6 @@ async function handleInserPeliculaRequest(req, res) {
     await peliculaCollection.inserOne(pelicula)
     .then((data) => {
         if(data === null) return res.status(400).send('error al guardar') 
-
         return res.status(201).send(data)
         })
     .catch ((e) => {return res.status(500).send({error:e}) })    
@@ -61,7 +60,6 @@ async function handleUpdatePeliculaByidRequest(req, res) {
 
     try{
         let oid = ObjectId.createFromHexString(id)
-
         let query = { $set: pelicula }
 
         await peliculaCollection.updateOne( {_id: oid}, query)
@@ -72,6 +70,7 @@ async function handleUpdatePeliculaByidRequest(req, res) {
         return res.status(400).send('La ID no fue encontrada o esta mal ingresada')
     } 
 }
+
 
 //Funcion Eliminar pelicula por ID
 
@@ -90,6 +89,9 @@ async function handleDeletePeliculaByIdRequest(req, res) {
         return req.status().send('La ID no fue encontrada o esta mal ingresada')
     }    
 }
+
+
+//Exportando las Funciones
 
 export default {
     handleDeletePeliculaByIdRequest,

@@ -7,7 +7,6 @@ import routes from './src/pelicula/routes.js';
 const PORT = 3000 || 4000;
 const app = express();
 
-
 // Middlewares
 app.use(express.json());
 app.use(urlencoded({ extended: true}));
